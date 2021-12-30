@@ -1,0 +1,42 @@
+{
+  txt_hello: {
+    width: 'wrap',
+    top: [
+      'parent',
+      'top',
+      32
+    ],
+    start: [
+      'parent',
+      'start'
+    ],
+    end: [
+      'parent',
+      'end'
+    ]
+  },
+  txt_test: {
+    top: [
+      'txt_hello',
+      'bottom',
+      8
+    ],
+    start: [
+      'parent',
+      'start'
+    ]
+  },
+  img_settings: {
+    width: 70,
+    height: 70,
+    top: [
+      'txt_test',
+      'bottom',
+      8
+    ],
+    end: [
+      'parent',
+      'end'
+    ]
+  }
+}
