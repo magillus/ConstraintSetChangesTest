@@ -1,6 +1,11 @@
 # ConstraintSetChangesTest
 Simple project showing Changes of ConstraintSet value as part of mutable state in JetpackCompose.
 
+## Issue
+
+The issue seems related to 2 invlidation of the Composable function and rendering with new ComposableSet and with previous one.
+Some UI widgets do not render correctly, even after few times tapping (reloading) on same constraint set.
+
 
 ## Issue visible on Device:
 
