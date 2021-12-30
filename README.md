@@ -1,6 +1,12 @@
 # ConstraintSetChangesTest
 Simple project showing Changes of ConstraintSet value as part of mutable state in JetpackCompose.
 
+Version: 
+
+```
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.0-rc02")
+```
+
 ## Issue
 
 The issue seems related to 2 invlidation of the Composable function and rendering with new ComposableSet and with previous one.
