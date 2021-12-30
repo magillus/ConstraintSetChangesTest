@@ -35,37 +35,35 @@ class MainActivity : ComponentActivity() {
             ChangeConstraintSetTestTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Surface(color = MaterialTheme.colors.background) {
-                        Box(Modifier.fillMaxSize()) {
-                            val constraints = remember { mutableStateOf(resConstraints) }
-                            Log.i("MainActivity", "Constraints: ${constraints.value}")
+                    Box(Modifier.fillMaxSize()) {
+                        val constraints = remember { mutableStateOf(resConstraints) }
+                        Log.i("MainActivity", "Constraints: ${constraints.value}")
 
-                            Greeting("Android", ConstraintSet(constraints.value))
+                        Greeting("Android", ConstraintSet(constraints.value))
 
-                            Column(
-                                Modifier
-                                    .align(Alignment.BottomEnd)
-                                    .width(150.dp)
-                            ) {
-                                Button({}, Modifier.fillMaxWidth()) {
-                                    Text("From resources")
-                                    constraints.value = resConstraints
-                                }
-                                Divider(Modifier.padding(8.dp))
-                                Button({
-                                    constraints.value = constraintsA
-                                }, Modifier.fillMaxWidth()) {
-                                    Text("static A const")
-                                }
-                                Divider(Modifier.padding(8.dp))
-                                Button({
-                                    constraints.value = constraintsB
-                                }, Modifier.fillMaxWidth()) {
-                                    Text("static B const")
-                                }
+                        Column(
+                            Modifier
+                                .align(Alignment.BottomEnd)
+                                .width(150.dp)
+                        ) {
+                            Button({}, Modifier.fillMaxWidth()) {
+                                Text("From resources")
+                                constraints.value = resConstraints
                             }
-
+                            Divider(Modifier.padding(8.dp))
+                            Button({
+                                constraints.value = constraintsA
+                            }, Modifier.fillMaxWidth()) {
+                                Text("static A const")
+                            }
+                            Divider(Modifier.padding(8.dp))
+                            Button({
+                                constraints.value = constraintsB
+                            }, Modifier.fillMaxWidth()) {
+                                Text("static B const")
+                            }
                         }
+
                     }
                 }
             }
